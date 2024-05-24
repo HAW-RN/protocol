@@ -1,5 +1,0 @@
-# Anhang
-
-## Glossar
-
-## Referenzen

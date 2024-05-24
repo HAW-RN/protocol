@@ -23,22 +23,22 @@
 
 # Recap
 
-## Routing Protokoll
+## Routing protocol
 
-- Vorstellung der ersten Graphen eines Verbindungsaufbau
-- Erste Beispiele anhand von verschiedenen Topologien
+- Presentation of the first graphs of a connection setup
+- First examples using different topologies
 
-## Coderiung
+## Coding
 
-- Angekuckt wie man XML Dateien in Java handhabt
-- Erste Versuche diese auszuführen
-- Vorstellung der Vorteile von XML
+- Looked at how to handle XML files in Java
+- First attempts to execute them
+- Presentation of the advantages of XML
 
 ## Use Case
 
-- Vorstellung des ersten Use Cases
+- Presentation of the first use case
 
-## Organisatorisches
+## Organizational issues
 
-- Geroutetes Protokoll hat nur 1 (bis 2) Mitglieder gerade!
-- Lingua Franca ist Englisch
+- Routed protocol has only 1 (to 2) members right now!
+- Lingua Franca is English

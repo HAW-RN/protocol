@@ -1,1 +1,0 @@
-![Logo](./images/banner.png)

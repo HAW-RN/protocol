@@ -1,4 +1,4 @@
-![Logo](./.github/banner.png)
+![Logo](./protocol/images/banner.png)
 
 HAW RNP SoSe24 Group 2 Chat Protocol
 

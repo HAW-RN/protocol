@@ -14,9 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Merge Markdown files
+        run: |
+            mkdir -p merged_output
+            cat protocol/*.md > merged_output/output.md
       - uses: baileyjm02/markdown-to-pdf@v1
         with:
-          input_dir: protocol
+          input_path: merged_output/output.md
           output_dir: pdfs
           images_dir: protocol/images
           # for example <img src="./images/file-name.png">
@@ -24,7 +28,7 @@ jobs:
           # Default is true, can set to false to only get PDF files
           build_html: false
           table_of_contents: true
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: protocol
           path: pdfs

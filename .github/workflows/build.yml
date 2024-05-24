@@ -1,0 +1,34 @@
+# .github/workflows/convert-to-pdf.yml
+
+name: Docs to PDF
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - main
+      - initial
+
+jobs:
+  converttopdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Merge Markdown files
+        run: |
+            mkdir -p merged_output
+            cat protocol/*.md > merged_output/output.md
+      - uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_path: merged_output/output.md
+          output_dir: pdfs
+          images_dir: protocol/images
+          # for example <img src="./images/file-name.png">
+          image_import: ./images
+          # Default is true, can set to false to only get PDF files
+          build_html: false
+          table_of_contents: true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: protocol
+          path: pdfs

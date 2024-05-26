@@ -1,0 +1,39 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes
+</help_text><element><id>UMLActor</id><coordinates><x>120</x><y>390</y><w>60</w><h>110</h></coordinates><panel_attributes>User</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>300</x><y>90</y><w>440</w><h>660</h></coordinates><panel_attributes>Client A
+halign=left</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>330</x><y>200</y><w>120</w><h>60</h></coordinates><panel_attributes>*establish tcp*
+*connection*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>220</y><w>170</w><h>210</h></coordinates><panel_attributes>
+
+start new Connection
+cbase=d
+</panel_attributes><additional_attributes>10;190;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>240</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=.&gt;
+
+&lt;&lt;includes&gt;&gt;
+cbase=ur
+</panel_attributes><additional_attributes>10;20;10;60</additional_attributes></element><element><id>UMLActor</id><coordinates><x>770</x><y>340</y><w>100</w><h>110</h></coordinates><panel_attributes>other Clients</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>320</x><y>300</y><w>140</w><h>60</h></coordinates><panel_attributes>*send new_connection*
+*message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>230</y><w>370</w><h>150</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;350;130</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>320</x><y>400</y><w>140</w><h>50</h></coordinates><panel_attributes>*update routing table*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>340</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=.&gt;
+
+&lt;&lt;includes&gt;&gt;
+cbase=ur
+</panel_attributes><additional_attributes>10;20;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>320</y><w>360</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>340;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>390</y><w>350</w><h>50</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;30;330;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>560</x><y>120</y><w>150</w><h>60</h></coordinates><panel_attributes>*send*
+*routing_table_update*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>160</y><w>130</w><h>200</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>110;180;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>320</x><y>470</y><w>140</w><h>50</h></coordinates><panel_attributes>*send message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>440</y><w>130</w><h>210</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;190;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>480</y><w>200</w><h>170</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;180;150</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>440</y><w>170</w><h>70</h></coordinates><panel_attributes>new message to participant
+cbase=u
+
+</panel_attributes><additional_attributes>10;20;150;50</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>570</x><y>510</y><w>140</w><h>50</h></coordinates><panel_attributes>*forward message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>550</y><w>90</w><h>80</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+cbase=r
+</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>330</x><y>610</y><w>140</w><h>50</h></coordinates><panel_attributes>*display message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>600</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+cbase=u
+</panel_attributes><additional_attributes>10;30;110;30</additional_attributes></element><element><id>UMLNote</id><coordinates><x>330</x><y>700</y><w>220</w><h>40</h></coordinates><panel_attributes>Condition: {Client A is destination}
+extension point: receive message
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>320</x><y>550</y><w>240</w><h>40</h></coordinates><panel_attributes>Condition: {Client A is not destination}
+extension point: receive message
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>570</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=.()</panel_attributes><additional_attributes>10;10;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>620</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=.()</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>560</x><y>610</y><w>160</w><h>90</h></coordinates><panel_attributes>*receive message*
+--
+*extension points*
+display message
+forward message
+valign=top</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>330</x><y>120</y><w>120</w><h>60</h></coordinates><panel_attributes>*quit client*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>140</y><w>200</w><h>260</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;240;180;10</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>130</y><w>140</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Text</id><coordinates><x>800</x><y>310</y><w>40</w><h>30</h></coordinates><panel_attributes>1..*
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>400</y><w>350</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>330;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>430</y><w>120</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;10;90</additional_attributes></element></diagram>

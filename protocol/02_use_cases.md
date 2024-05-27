@@ -11,11 +11,13 @@ Client A receives a message and checks its destination address. If Client A is n
 Every X seconds Client A sends a routing_table_update to all directly connected Clients containing all information in Client A's routing table besides the routing information it got from the individual Clients. When receiving routing_table_update Client A will update its routing table with any new information from it.
 
 ### 4. Quit Client
-Client A marks all routes reachable through it including itself as unreachable and sends a routing table update 
+Client A sends a quit_message to all directly connected Clients. Afterwards the program ends itself.
 
-
+### 5. source is unavailable
+Client A marks all routes in its routing table reachable through the source including the source itself as unreachable and sends a routing table update.
 
 #### Client specific
 - send message
 - receive message
 - display message
+- display available participants

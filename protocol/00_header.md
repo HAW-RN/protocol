@@ -14,7 +14,6 @@
 
 ### Encoding
 
-- Jeremy Reimers
 - Andrii Lysyi
 - Alexander Kelsch
 - Maxim Gevenko
@@ -29,3 +28,5 @@
 ### Routed Protocol
 
 - Michael German
+- Tom Westendorf
+- Jeremy Reimers

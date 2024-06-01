@@ -16,6 +16,7 @@ The task of the routed protocol is to transfer chat messages from one client to 
 ## Procedure
 
 ## Example
+
 ```json
 {
     "package_type":       "data_message"

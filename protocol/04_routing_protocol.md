@@ -1,7 +1,6 @@
 # Routing protocol (participants)
     Bastian Basler, Tim Hagedorn, Ruben Marin Grez, Eike Balling
 ## Requirements
->Hier könnte ihre Werbung stehen
 #### Prerequisite
 - Teilnehmer müssen im selben Netz sein
 - Die Teilnehmer müssen auf ipv4 Broadcast Anfragen reagieren können

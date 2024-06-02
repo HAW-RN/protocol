@@ -76,7 +76,3 @@ Participants must be able to forward Messages
 - SCC: Send Connection Check
 - SCCR: Reply 
 - STU: Send Table Update
-
-
-
-

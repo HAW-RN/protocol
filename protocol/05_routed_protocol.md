@@ -6,9 +6,9 @@ The task of the routed protocol is to transfer chat messages from one client to 
 | Content          | Size in Byte | Max. size in JSON |
 |:---------------- | ------------:|------------------:|
 | Packagetyp       |            1 |                15 |
-| Source IP        |            4 |                 5 |
-| Source Port      |            2 |                15 |
-| Destination IP   |            4 |                 5 |
+| Source IP        |            4 |                15 |
+| Source Port      |            2 |                 5 |
+| Destination IP   |            4 |                15 |
 | Destination Port |            2 |                 5 |
 | TTL              |            1 |                 2 |
 | Data             |          128 |               128 |

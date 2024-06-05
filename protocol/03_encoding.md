@@ -9,12 +9,15 @@
 A message is made up of two JSON strings, one for the header and the other for the data.
 
 ### Header
-The header is always 50 characters long. This allows the receiving side to first fill an input buffer with the data for exactly one JSON string, and extract further information from there. The content of the header is `{"Header":{"Length":"01234","CRC32":"0123456789"}}`, or formatted to look more legible:
+The header is always 64 _UTF-16_ characters long. That means the payload should be exactly 128 bytes long, encoded big endian. 
+
+This allows the receiving side to first fill an input buffer with the data for exactly one JSON string, and extract further information from there. The content of the header is `{"Header":{"Length":"01234","CRC32":"0123456789","type_id":"1"}}`, or formatted to look more legible:
 ```json
 {
   "Header": {
       "Length": "01234",
-      "CRC32" : "0123456789"
+      "CRC32" : "0123456789",
+      "type_id": "1"
     }
 }
 ```
@@ -25,8 +28,17 @@ The information here is used to receive the data JSON.
 |--------|---------------------------------------------------------|---------------------|
 | Length | Length of the 2nd JSON string (Data) in bytes.          | `uint16` or `int32` | 
 | CRC32  | CRC32 checksum over the buffer of the 2nd JSON string.  | `uint32` or `int64` |
+| type_id| The type of the message.                                | `uint8` or `int16`  |
 
 To ensure that the header is always 50 characters long, all values are encoded as strings with leading zeros. The number of digits depends on the largest possible number of these values. Both values must be treated as unsigned integers. If the chosen programming language does not support this, a larger data type must be selected. The recommended types are listed in the table above.
+
+### Packet Type
+The `type_id` field is used to determine the type of the message. The following types are defined:
+
+| ID | Type          | Description                |
+|----|---------------|----------------------------|
+| 1  | Routing       | Routing Packet             |
+| 2  | Routed        | Routed Packet              |
 
 ### Data
 This JSON contains the payload. Its content is defined by the appropriate sections.

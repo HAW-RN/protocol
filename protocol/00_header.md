@@ -1,5 +1,7 @@
 ![Logo](./images/banner.png)
 
+# SWAG: **S**imple **W**ebbased **A**synchronous **G**roupchat Protcool
+
 ## Authors
 
 ### Chair

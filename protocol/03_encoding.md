@@ -30,7 +30,7 @@ The information here is used to receive the data JSON.
 | CRC32  | CRC32 checksum over the buffer of the 2nd JSON string.  | `uint32` or `int64` |
 | type_id| The type of the message.                                | `uint8` or `int16`  |
 
-To ensure that the header is always 50 characters long, all values are encoded as strings with leading zeros. The number of digits depends on the largest possible number of these values. Both values must be treated as unsigned integers. If the chosen programming language does not support this, a larger data type must be selected. The recommended types are listed in the table above.
+To ensure that the header is always 64 characters long, all values are encoded as strings with leading zeros. The number of digits depends on the largest possible number of these values. Both values must be treated as unsigned integers. If the chosen programming language does not support this, a larger data type must be selected. The recommended types are listed in the table above.
 
 ### Packet Type
 The `type_id` field is used to determine the type of the message. The following types are defined:
@@ -48,8 +48,8 @@ This JSON contains the payload. Its content is defined by the appropriate sectio
 
 ## Handling Headers
 
-If a client is sending a message, it should first write a header. To do this, the size of the string-formatted JSON data and the CRC32 checksum of this data must be calculated and packed into a JSON-formatted header. This header must be aligned to 50 bytes as stated above. The header and the data are then sent immediately one after the other, with the header preceding the data (encapsulation).
+If a client is sending a message, it should first write a header. To do this, the size of the string-formatted JSON data and the CRC32 checksum of this data must be calculated and packed into a JSON-formatted header. This header must be aligned to 128 bytes as stated above. The header and the data are then sent immediately one after the other, with the header preceding the data (encapsulation).
 
-If a client is receiving a message, it should read 50 bytes from the input buffer to receive the header. After reading the data size from the header, the client can start reading the data section of the message using the data size. Then, the CRC32 checksum of the data section should be calculated and compared to the checksum specified in the header:  
+If a client is receiving a message, it should read 128 bytes from the input buffer to receive the header. After reading the data size from the header, the client can start reading the data section of the message using the data size. Then, the CRC32 checksum of the data section should be calculated and compared to the checksum specified in the header:  
 If the checksums are equal, the client can proceed with further processing, such as message forwarding or updating the routing table.  
 If the checksums are not equal, the message can be discarded and ignored.

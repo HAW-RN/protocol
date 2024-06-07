@@ -25,7 +25,7 @@ The information here is used to receive the data JSON.
 | Name   | Description                                             | Target Type         |
 |--------|---------------------------------------------------------|---------------------|
 | length | Length of the 2nd JSON string (Data) in bytes.          | `uint16` or `int32` | 
-| crc32  | CRC32 checksum over the buffer of the 2nd JSON string.  | `uint32` or `int53` |
+| crc32  | CRC32 checksum over the buffer of the 2nd JSON string.  | `uint32` or `int64` |
 | type_id| The type of the message.                                | `byte (u8)`         |
 
 To ensure that the header is always 53 characters long, all values are encoded as strings with leading zeros. The number of digits depends on the largest possible number of these values. Both values must be treated as unsigned integers. If the chosen programming language does not support this, a larger data type must be selected. The recommended types are listed in the table above.

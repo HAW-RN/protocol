@@ -49,7 +49,6 @@ See "Shared Header" section
     }
   ]
 }
-
 ```
 
 ## Packet Types

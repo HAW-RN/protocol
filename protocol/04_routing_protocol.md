@@ -21,28 +21,31 @@ Participants must be able to forward Messages
 See "Shared Header" section
 
 ### Table
-| Target  | Next | Hop-Count  |   
-|---|---|---|
-|  IP:Port | IP:Port  | Integer  |   
-|  192.168.101.12:1234 | 192.168.101.13:1243  | 2 |   
-|   |   |   | 
+| target_ip | target_port | next_ip  | next_port | hop_count  |   
+|---|---|---|--|---|
+|  192.168.101.12 | 1234 | 192.168.101.13 | 1243  | 2 |   
+|  10.0.0.5 | 1234 | 10.0.0.3 | 1234  | 4 |
+|  10.0.0.11 | 1234 | 10.0.0.6 | 1234  | 2 |
 
 ### Example Data
 
 ```json
 {
   "header":     {[...]}, // SEE SHARED HEADER
-  "data": "Participant A",
   "table": [
     {
-      "target": "10.0.0.5",
+      "target_ip": "10.0.0.5",
+      "target_port": 1234,
       "next": "10.0.0.3",
-      "hop_count": "4"
+      "next_port": 1234,
+      "hop_count": 4
     },
     {
-      "target": "10.0.0.11",
-      "next": "10.0.0.6",
-      "hop_count": "2"
+      "target_ip": "10.0.0.11",
+      "target_port": 1234,
+      "next_ip": "10.0.0.6",
+      "next_port": 1234,
+      "hop_count": 2
     }
   ]
 }

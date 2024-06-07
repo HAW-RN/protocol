@@ -9,7 +9,7 @@
 A message is made up of two JSON strings, one for the header and the other for the data.
 
 ### Header
-The header is always 53 _UTF-8_ characters long. That means the payload should be exactly 53 bytes long, encoded big endian. 
+The header is always 53 _UTF-8_ characters long. That means the payload should be exactly 53 bytes long. 
 
 This allows the receiving side to first fill an input buffer with the data for exactly one JSON string, and extract further information from there. The content of the header is `{"length":"01234","crc32":"0123456789","type_id":"1"}`, or formatted to look more legible:
 ```json
@@ -26,9 +26,9 @@ The information here is used to receive the data JSON.
 |--------|---------------------------------------------------------|---------------------|
 | length | Length of the 2nd JSON string (Data) in bytes.          | `uint16` or `int32` | 
 | crc32  | CRC32 checksum over the buffer of the 2nd JSON string.  | `uint32` or `int64` |
-| type_id| The type of the message.                                | `byte (u8)`         |
+| type_id| The type of the message.                                | `byte (uint8)`      |
 
-To ensure that the header is always 53 characters long, all values are encoded as strings with leading zeros. The number of digits depends on the largest possible number of these values. Both values must be treated as unsigned integers. If the chosen programming language does not support this, a larger data type must be selected. The recommended types are listed in the table above.
+To ensure that the header is always 53 characters long, all values are encoded as strings with leading zeros. The number of digits depends on the largest possible number of these values. All values must be treated as unsigned integers. If the chosen programming language does not support this, a larger data type must be selected. The recommended types are listed in the table above.
 
 ### Packet Type
 The `type_id` field is used to determine the type of the message. The following types are defined:

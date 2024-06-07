@@ -15,15 +15,15 @@ The task of the routed protocol is to transfer chat messages from one client to 
 
 ## Procedure
 
-## Example
+## Example (TWE)
 ```json
 {
     "package_type":       "data_message"
     "source_ip":          "192.168.123.122"
-    "source_port":        "6827"
+    "source_port":        6827
     "destination_ip":     "192.168.234.233"
-    "destination_port":   "234"
-    "ttl":                "16"
+    "destination_port":   234
+    "ttl":                16
     "data":               "Test Data"
 }
 ```

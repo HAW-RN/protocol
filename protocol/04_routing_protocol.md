@@ -66,7 +66,7 @@ Defined within the `type_id` field of the common header.
 | 6  | STU           | Send Table Update (Send Routingtable)  |
 
 ## Procedure (Eike Balling)
-1. Participant A starts the Application and sets internal Table update Timer to 30 seconds
+1. Participant A starts the Application and sets internal Table update Timer to 10 seconds
 2. Participant B sends CR to Participant A and sends current Routingtable
 3. Participant A accepts CR from Participant B and answers CRR and sends current Routingtable 
 4. Participant A updates Routingtable based on the received Table
@@ -74,7 +74,7 @@ Defined within the `type_id` field of the common header.
 6.  Participant A updates Routingtable based on received SCCRs
     1. If SCCR isn´t received after one second Participant A sets Hop Count to 32 (Poison Reverse)
 7. Participant A sends STU to all active Participants
-8. Participant A resets Timer to 30 seconds
+8. Participant A resets Timer to 10 seconds
 
 ## Example
 ![Logo](./images/Routing_Protokoll_Sequenz_Diagram.png)

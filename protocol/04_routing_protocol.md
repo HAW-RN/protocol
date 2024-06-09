@@ -36,7 +36,7 @@ See "Shared Header" section
     {
       "target_ip": "10.0.0.5",
       "target_port": 1234,
-      "next": "10.0.0.3",
+      "next_ip": "10.0.0.3",
       "next_port": 1234,
       "hop_count": 4
     },

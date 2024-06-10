@@ -1,0 +1,53 @@
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><help_text>Space for diagram notes
+</help_text><element><id>UMLActor</id><coordinates><x>0</x><y>352</y><w>66</w><h>121</h></coordinates><panel_attributes>User</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>198</x><y>22</y><w>517</w><h>836</h></coordinates><panel_attributes>Client A
+halign=left</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>231</x><y>143</y><w>132</w><h>66</h></coordinates><panel_attributes>*establish tcp*
+*connection*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>66</x><y>165</y><w>187</w><h>231</h></coordinates><panel_attributes>
+
+start new Connection
+cbase=d
+</panel_attributes><additional_attributes>10;190;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>286</x><y>187</y><w>99</w><h>88</h></coordinates><panel_attributes>lt=.&gt;
+
+&lt;&lt;includes&gt;&gt;
+cbase=ur
+</panel_attributes><additional_attributes>10;20;10;60</additional_attributes></element><element><id>UMLActor</id><coordinates><x>726</x><y>264</y><w>110</w><h>121</h></coordinates><panel_attributes>other Clients</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>220</x><y>253</y><w>154</w><h>66</h></coordinates><panel_attributes>*send new_connection*
+*message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>352</x><y>165</y><w>429</w><h>132</h></coordinates><panel_attributes>lt=-&gt;</panel_attributes><additional_attributes>10;10;370;100</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>220</x><y>363</y><w>154</w><h>55</h></coordinates><panel_attributes>*update routing table*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>286</x><y>308</y><w>99</w><h>77</h></coordinates><panel_attributes>lt=.&gt;
+
+&lt;&lt;includes&gt;&gt;
+cbase=r
+</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>363</x><y>275</y><w>396</w><h>77</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>340;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>363</x><y>341</y><w>396</w><h>66</h></coordinates><panel_attributes>lt=&lt;-&gt;</panel_attributes><additional_attributes>10;40;340;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>462</x><y>231</y><w>165</w><h>66</h></coordinates><panel_attributes>*send*
+*routing_table_update*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>253</y><w>143</w><h>66</h></coordinates><panel_attributes>lt=&lt;-&gt;
+</panel_attributes><additional_attributes>110;40;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>220</x><y>440</y><w>154</w><h>55</h></coordinates><panel_attributes>*send message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>649</x><y>374</y><w>121</w><h>286</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;240;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>44</x><y>440</y><w>209</w><h>198</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;170;160</additional_attributes></element><element><id>Relation</id><coordinates><x>55</x><y>407</y><w>187</w><h>77</h></coordinates><panel_attributes>new message to participant
+cbase=u
+
+</panel_attributes><additional_attributes>10;20;150;50</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>495</x><y>484</y><w>154</w><h>55</h></coordinates><panel_attributes>*source is*
+*unreachable*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>561</x><y>528</y><w>99</w><h>88</h></coordinates><panel_attributes>lt=.&gt;
+   &lt;&lt;extends&gt;&gt;
+cbase=r
+</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>231</x><y>594</y><w>154</w><h>55</h></coordinates><panel_attributes>*display message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>374</x><y>605</y><w>132</w><h>77</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;
+cbase=u
+</panel_attributes><additional_attributes>10;10;100;45</additional_attributes></element><element><id>UMLNote</id><coordinates><x>231</x><y>682</y><w>242</w><h>44</h></coordinates><panel_attributes>Condition: {Client A is destination}
+extension point: receive message
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>220</x><y>528</y><w>286</w><h>55</h></coordinates><panel_attributes>Condition: {Client A is destination and its a
+quit message}
+extension point: receive message
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>495</x><y>550</y><w>99</w><h>33</h></coordinates><panel_attributes>lt=.()</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>418</x><y>627</y><w>33</w><h>77</h></coordinates><panel_attributes>lt=.()</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>484</x><y>594</y><w>176</w><h>121</h></coordinates><panel_attributes>*receive message*
+--
+*extension points*
+source is unreachable
+display message
+forward message
+valign=top</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>231</x><y>55</y><w>132</w><h>66</h></coordinates><panel_attributes>*quit client*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>33</x><y>77</y><w>220</w><h>286</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;240;180;10</additional_attributes></element><element><id>Text</id><coordinates><x>759</x><y>231</y><w>44</w><h>33</h></coordinates><panel_attributes>1..*
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>363</x><y>363</y><w>396</w><h>121</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>340;10;10;90</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>231</x><y>792</y><w>154</w><h>55</h></coordinates><panel_attributes>*display available*
+*participants*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>33</x><y>462</y><w>220</w><h>374</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;180;320</additional_attributes></element><element><id>Relation</id><coordinates><x>352</x><y>242</y><w>132</w><h>44</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>10;20;100;20</additional_attributes></element><element><id>Relation</id><coordinates><x>352</x><y>77</y><w>429</w><h>198</h></coordinates><panel_attributes>lt=&lt;-
+       quit message
+cbase=u
+</panel_attributes><additional_attributes>370;160;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>561</x><y>704</y><w>99</w><h>88</h></coordinates><panel_attributes>lt=.&gt;
+   &lt;&lt;extends&gt;&gt;
+</panel_attributes><additional_attributes>10;60;10;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>495</x><y>770</y><w>154</w><h>55</h></coordinates><panel_attributes>*forward message*</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>352</x><y>396</y><w>242</w><h>110</h></coordinates><panel_attributes>lt=.&gt;
+
+
+&lt;&lt;includes&gt;&gt;</panel_attributes><additional_attributes>200;80;10;10</additional_attributes></element><element><id>UMLNote</id><coordinates><x>231</x><y>737</y><w>264</w><h>44</h></coordinates><panel_attributes>Condition: {Client A is not destination}
+extension point: receive message
+bg=pink</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>484</x><y>737</y><w>110</w><h>33</h></coordinates><panel_attributes>lt=.()</panel_attributes><additional_attributes>10;10;80;10</additional_attributes></element></diagram>

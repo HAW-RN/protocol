@@ -1,7 +1,0 @@
-# Encoding
-
-## Requirements
-
-## Format
-
-## Example

@@ -46,10 +46,12 @@ This JSON contains the payload. Its content is defined by the appropriate sectio
 ## Example
 
 
-## Handling Headers
+## Handling Headers (Maxim Gevenko)
 
-If a client is sending a message, it should first write a header. To do this, the size of the string-formatted JSON data and the CRC32 checksum of this data must be calculated and packed into a JSON-formatted header. This header must be aligned to 64 bytes as stated above. The header and the data are then sent immediately one after the other, with the header preceding the data (encapsulation).
+### Sending headers
+If a client is sending a message, it should first write a header. To do this, the size of the string-formatted JSON data and the CRC32 checksum of this data must be calculated and packed into a JSON-formatted header. This header must be aligned to 64 bytes as stated above. The header and the data are then sent immediately one after the other, with the header preceding the data (*encapsulation*).
 
+### Receiving headers
 If a client is receiving a message, it should read 64 bytes from the input buffer to receive the header. After reading the data size from the header, the client can start reading the data section of the message using the data size. Then, the CRC32 checksum of the data section should be calculated and compared to the checksum specified in the header:  
 If the checksums are equal, the client can proceed with further processing, such as message forwarding or updating the routing table.  
 If the checksums are not equal, the message can be discarded and ignored.

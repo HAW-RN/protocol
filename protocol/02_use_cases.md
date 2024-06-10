@@ -14,7 +14,7 @@ Every 10 seconds Client A requests all directly connected Clients to send a SCCR
 When requested Client A sends a SCCR to the requesting Client containing all information in Client A's routing table besides the information it got from the requesting Client.
 
 ### 5. Quit Client
-Client A sends a quit_message? to all directly connected Clients. Afterwards the program ends itself.
+Client A marks all connections through it as unreachable and sends a STU to all directly connected Clients. Afterwards the program ends itself.
 
 ### 6. source is unavailable
 Client A marks all routes in its routing table reachable through the source including the source itself as unreachable and sends a routing table update.

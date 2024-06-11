@@ -3,7 +3,15 @@
 ## Requirements
 - The protocols must use JavaScript Object Notation (JSON).
 - The JSON string must be UTF-8 encoded.
-- ...
+- The header must be 53 characters long.
+- The header must include length, crc32, and type_id.
+- The length field must contain the size of the data in bytes.
+- The crc32 field must contain the CRC32 checksum of the data.
+- The type_id field must contain the type of the message.
+- All values must be encoded as strings fields with leading zeros.
+- All values in the fields must be treated as unsigned integers.
+- The header must be sent before the data.
+- All messeges with unmatching checksum must be ignored.
 
 ## Format
 A message is made up of two JSON strings, one for the header and the other for the data.

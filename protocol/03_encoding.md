@@ -1,11 +1,11 @@
 # Encoding
 
-## Requirements
+## Requirements (Andrii Lysyi)
 - The protocols must use JavaScript Object Notation (JSON).
 - The JSON string must be UTF-8 encoded.
 - ...
 
-## Format
+## Format (Alexander Kelsch)
 A message is made up of two JSON strings, one for the header and the other for the data.
 
 ### Header

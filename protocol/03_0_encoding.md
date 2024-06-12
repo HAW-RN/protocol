@@ -1,6 +1,6 @@
 # Encoding
 
-## Requirements
+## Requirements (Andrii Lysyi)
 - The protocols must use JavaScript Object Notation (JSON).
 - The JSON string must be UTF-8 encoded.
 - The header must be 53 characters long.
@@ -13,7 +13,7 @@
 - The header must be sent before the data.
 - All messeges with unmatching checksum must be ignored.
 
-## Format
+## Format (Alexander Kelsch)
 A message is made up of two JSON strings, one for the header and the other for the data.
 
 ### Header
@@ -50,9 +50,9 @@ The `type_id` field is used to determine the type of the message. The following 
 | 5  | SCCR          | Reply |
 | 6  | STU           | Send Table Update  |
 
-## Handling Headers
+## Handling Headers (Maxim Gevenko)
 
-If a client is sending a message, it should first write a header. To do this, the size of the string-formatted JSON data and the CRC32 checksum of this data must be calculated and packed into a JSON-formatted header. This header must be aligned to 53 bytes as stated above. The header and the data are then sent immediately one after the other, with the header preceding the data (encapsulation).
+If a client is sending a message, it should first write a header. To do this, the size of the string-formatted JSON data and the CRC32 checksum of this data must be calculated and packed into a JSON-formatted header. This header must be aligned to 53 bytes as stated above. The header and the data are then sent immediately one after the other, with the header preceding the data (*encapsulation*).
 
 If a client is receiving a message, it should read 53 bytes from the input buffer to receive the header. After reading the data size from the header, the client can start reading the data section of the message using the data size. Then, the CRC32 checksum of the data section should be calculated and compared to the checksum specified in the header:  
 If the checksums are equal, the client can proceed with further processing, such as message forwarding or updating the routing table.  

@@ -7,10 +7,10 @@ The shared header is part of the data after the initial common header. It has a 
 | Name | Description | Target Type |
 |------|-------------|-------------|
 | Source IP | IPv4 address of the sender | `string` |
-| Source Port | Port of the sender | `uint16 or int32` |
+| Source Port | Port of the sender | `int` |
 | Destination IP | IPv4 address of the destination | `string` |
-| Destination Port | Port of the destination | `uint16 or int32` |
-| TTL | time to live of the package. maximum of 16 to 64 | `byte (uint8)` |
+| Destination Port | Port of the destination | `int` |
+| TTL | time to live of the package. maximum of 16 to 64 | `int` |
 
 ## Example
 

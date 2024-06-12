@@ -74,4 +74,4 @@ Defined within the `type_id` field of the common header.
 8. Participant A resets Timer to 10 seconds
 
 ## Example
-![Logo](./images/Routing_Protokoll_Sequenz_Diagram.png)
+![Logo](./images/Routing_Protokoll_Sequenz_Diagramm-1.drawio.png)

@@ -54,6 +54,8 @@ See "Shared Header" section
 
 Defined within the `type_id` field of the common header.
 
+Note that only direct peers of a participant need deal with the following packet types. All other participants should ignore them and simply forward them to the next hop. There is no reason to ever sent a routing packet to a participant that is not a direct peer.
+
 | ID | Type          | Description                |
 |----|---------------|----------------------------|
 | 2  | CR            | Connection Request (Send Routingtable)  |

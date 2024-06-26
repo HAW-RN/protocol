@@ -1,4 +1,4 @@
-# Introduction
+# Introduction (Tom Hert)
 
 SWAG is a protocol for Simple Web-based Asynchronous Group chat. It is designed to be easy to use and easy to implement.
 

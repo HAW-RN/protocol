@@ -1,4 +1,4 @@
-![Logo](./protocol/images/banner.png)
+![Logo](./protocol/images/logo.png)
 
 ## [Protocol](./protocol) - [Meeting Notes](./meetings)
 

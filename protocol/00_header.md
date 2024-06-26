@@ -1,6 +1,8 @@
-![Logo](./images/banner.png)
+![Logo](./images/logo.png)
 
 # SWAG: **S**imple **W**ebbased **A**synchronous **G**roupchat Protcool
+
+## Version 1.1 (26.06.2024)
 
 ## Authors
 

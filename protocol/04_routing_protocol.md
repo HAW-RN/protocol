@@ -64,6 +64,13 @@ Note that only direct peers of a participant need deal with the following packet
 | 5  | SCCR          | Connection Check Reply  |
 | 6  | STU           | Send Table Update (Send Routingtable)  |
 
+## Routing Table Behaviour
+__Introduced in v1.2 (01.07.2024)__
+
+The hops number in the routing table is send as is to the peer. You may not increment the hops count when sending the routing table. The peer then incorporates the received routing table into its own routing table. The hops within the routing table that was received is incremented by 1.
+
+*This means that hop counts are not incremented when sending the routing table, but are incremented when receiving the routing table.*
+
 ## Procedure (Eike Balling)
 1. Participant A starts the Application and sets internal Table update Timer to 10 seconds
 2. Participant B sends CR to Participant A and sends current Routingtable
